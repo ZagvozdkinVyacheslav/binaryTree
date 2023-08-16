@@ -156,4 +156,26 @@ class BinaryTreeTest {
 
         assertThrows(NoSuchElementException.class,()->{bt.delete(1000l,0l);});
     }
+
+    @Test
+    void clear1() {
+        bt.add(new TreeNode(100l,0l,"str"));
+        bt.add(new TreeNode(50l,0l,"str"));
+        bt.add(new TreeNode(150l,0l,"str"));
+        bt.add(new TreeNode(120l,0l,"str"));
+        bt.add(new TreeNode(170l,0l,"str"));
+        bt.clear();
+        assertEquals(0,
+                bt.getSize());
+    }
+    @Test
+    void clear2() {
+        bt.add(new TreeNode(100l,0l,"str"));
+        bt.add(new TreeNode(50l,0l,"str"));
+        bt.add(new TreeNode(150l,0l,"str"));
+
+        bt.clear();
+        assertEquals("",
+                bt.print());
+    }
 }

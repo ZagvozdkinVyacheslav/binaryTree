@@ -137,9 +137,26 @@ public class BinaryTree<T extends TreeNode> {
     }
     public String print(){
         lcr(root);
-        setOut(out.delete(out.length() - 2, out.length()));
+        if(out.length() >= 2){
+            setOut(out.delete(out.length() - 2, out.length()));
+        }
+
         String str = out.toString();
         setOut(new StringBuilder());
         return str;
+    }
+    private void clearTree(Node node) {
+
+        if (node != null) {
+            clearTree(node.getLeftChild());
+            clearTree(node.getRightChild());
+            node.setValue(null);
+            size--;
+        }
+
+    }
+    public void clear(){
+        clearTree(root);
+        root = null;
     }
 }

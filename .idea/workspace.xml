@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f9a40cc-cfae-4591-ab5b-47122cf28c3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MainClass/mainFunc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Nodes/DataNode1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Nodes/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Nodes/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Nodes/TreeNodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +60,8 @@
       <recent name="Nodes" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BinaryTreeTest.delete4">
-    <configuration name="BinaryTreeTest.delete1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BinaryTreeTest.clear2">
+    <configuration name="BinaryTreeTest.clear1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
@@ -79,7 +71,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="Entity" />
       <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="delete1" />
+      <option name="METHOD_NAME" value="clear1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTest.clear2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binaryTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="clear2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,29 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinaryTreeTest.lcr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="binaryTree" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Entity" />
-      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="lcr" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinaryTreeTest.clear2" />
+        <item itemvalue="JUnit.BinaryTreeTest.clear1" />
         <item itemvalue="JUnit.BinaryTreeTest.delete4" />
         <item itemvalue="JUnit.BinaryTreeTest.delete3" />
         <item itemvalue="JUnit.BinaryTreeTest.delete2" />
-        <item itemvalue="JUnit.BinaryTreeTest.delete1" />
-        <item itemvalue="JUnit.BinaryTreeTest.lcr" />
       </list>
     </recent_temporary>
   </component>
@@ -171,11 +163,26 @@
       <workItem from="1692046123269" duration="29000" />
       <workItem from="1692091669501" duration="7044000" />
       <workItem from="1692128474413" duration="168000" />
-      <workItem from="1692168878554" duration="14904000" />
+      <workItem from="1692168878554" duration="16758000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java</url>
+          <line>144</line>
+          <properties class="Entity.BinaryTree" method="clearTree">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
