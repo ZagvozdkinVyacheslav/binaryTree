@@ -1,25 +1,50 @@
 package Entity;
 
+import Nodes.DataNode1;
 import Nodes.Node;
 import Nodes.TreeNode;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.source.tree.Tree;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
-import javax.swing.plaf.InsetsUIResource;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.TreeMap;
 @Getter
 @Setter
+@Slf4j
 public class BinaryTree<T extends TreeNode> {
     private Node root;
     int size;
     StringBuilder out;
-    BinaryTree(){
+    public BinaryTree(){
         size = 0;
         out = new StringBuilder();
     }
     public void add(T value){
-        root = addRecursive(root, value);
+        try {
+            switch(value.getClassName()){
+                case "TreeNode":
+                case "DataNode1":
+                    root = addRecursive(root, value);
+                    break;
+                default:
+                    throw new IllegalArgumentException();
+            }
+        }
+        catch (IllegalArgumentException e){
+            log.error("Invalid class name \"" + value.getClassName() + "\"");
+        }
+
+
+
     }
     private Node addRecursive(Node current, T value){
 
@@ -40,7 +65,7 @@ public class BinaryTree<T extends TreeNode> {
 
     }
     public TreeNode find(Long id, Long subId){
-        var temp = new TreeNode(id,subId);
+        var temp = new DataNode1(id,subId);
         var current = root;
         while (current != null){
             switch(temp.compareTo(current.getValue())){
@@ -57,7 +82,7 @@ public class BinaryTree<T extends TreeNode> {
         throw new NoSuchElementException("Такого элемента нет");
     }
     public void delete(Long id, Long subId){
-        var temp = new TreeNode(id,subId);
+        var temp = new DataNode1(id,subId);
         Node current = root;
         Node parent = root;
         while (current.getValue().compareTo(temp) != 0) {
@@ -158,5 +183,40 @@ public class BinaryTree<T extends TreeNode> {
     public void clear(){
         clearTree(root);
         root = null;
+    }
+    /*public static <T> List<T> parseJsonArray(String path,
+                                             Class<T> classOnWhichArrayIsDefined)
+            throws IOException, ClassNotFoundException {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File(path);
+        Class<T[]> arrayClass = null;
+        try {
+            arrayClass = (Class<T[]>) Class.forName(String.valueOf(classOnWhichArrayIsDefined.getDeclaredField("className")));
+        } catch (NoSuchFieldException e) {
+            log.error("Invalid json data");
+        }
+        T[] objects = mapper.readValue(file, arrayClass);
+        return Arrays.asList(objects);
+    }*/
+
+    private List<T> fileToListOfPojos(String path) throws IOException {//дописать на несколько типов
+        ObjectMapper objectMapper = new ObjectMapper();
+        File file = new File(path);
+        JavaType type = objectMapper.getTypeFactory().
+                constructCollectionType(List.class, DataNode1.class);
+        List<T> typeList = objectMapper.readValue(file, type);//new TypeReference<>(){}
+        return typeList;
+    }
+    public void addFromFile(String path){
+        try {
+            var list = fileToListOfPojos(path);
+            for (var elem:list
+            ) {
+                this.add(elem);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

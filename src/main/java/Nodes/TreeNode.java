@@ -2,6 +2,7 @@ package Nodes;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.lang.reflect.Field;
@@ -10,7 +11,8 @@ import java.util.Comparator;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class TreeNode implements Comparable<TreeNode>{
+@NoArgsConstructor
+public abstract class TreeNode implements Comparable<TreeNode>{
     private Long id;
     private Long subId;
     private String className;
@@ -28,7 +30,6 @@ public class TreeNode implements Comparable<TreeNode>{
     }
     @Override
     public int compareTo(TreeNode o) {
-        if(this.equals(o)) return 0;
         if(this.id + this.subId > o.id + o.subId)return 1;
         if(this.id + this.subId == o.id + o.subId)return 0;
         return -1;

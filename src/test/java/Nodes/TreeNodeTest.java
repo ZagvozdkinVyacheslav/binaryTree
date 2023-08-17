@@ -8,35 +8,35 @@ class TreeNodeTest {
 
     @Test
     void compareTo1() {
-        TreeNode tn = new TreeNode(1l,2l,"tr");
         DataNode1 dn = new DataNode1(1l,2l,"tr", 12d);
-        assertEquals(0,tn.compareTo(dn));
+        DataNode1 dn1 = new DataNode1(1l,2l,"tr", 12d);
+        assertEquals(0,dn1.compareTo(dn));
     }
     @Test
     void compareTo2() {
-        TreeNode tn = new TreeNode(1l,2l,"tr");
-        DataNode1 dn = new DataNode1(1l,2l,"tr", 12d);
-        assertEquals(0,dn.compareTo(tn));
+        DataNode1 dn = new DataNode1(1l,2l,"tr", 123d);
+        DataNode1 dn1 = new DataNode1(1l,2l,"tr", 12d);
+        assertEquals(0,dn.compareTo(dn1));
     }
     @Test
     void compareToEqual() {
-        TreeNode tn = new TreeNode(1l,2l,"tr");
-        TreeNode tn1 = new TreeNode(1l,2l,"tr");
+        DataNode1 dn = new DataNode1(1l,2l,"tr", 12d);
+        DataNode1 dn1 = new DataNode1(1l,2l,"tr", 12d);
 
-        assertEquals(0,tn1.compareTo(tn));
+        assertEquals(0,dn1.compareTo(dn));
     }
     @Test
     void compareTo3() {
-        TreeNode tn = new TreeNode(1l,2l,"tr");
-        DataNode1 dn = new DataNode1(15l,2l,"tr", 12d);
+        DataNode1 dn = new DataNode1(1l,2l,"tr",12d);
+        DataNode1 dn1 = new DataNode1(15l,2l,"tr", 12d);
 
-        assertEquals(-1,tn.compareTo(dn));
+        assertEquals(-1,dn.compareTo(dn1));
     }
     @Test
     void compareTo4() {
-        TreeNode tn = new TreeNode(1l,2l,"tr");
+        DataNode1 dn1 = new DataNode1(5l,2l,"tr", 12d);
         DataNode1 dn = new DataNode1(15l,2l,"tr", 12d);
 
-        assertEquals(1,dn.compareTo(tn));
+        assertEquals(1,dn.compareTo(dn1));
     }
 }
