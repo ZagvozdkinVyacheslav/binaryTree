@@ -1,0 +1,25 @@
+[
+	{
+		"id":2,
+		"subId":31,
+		"className":"DatNode2",
+		"someStr":"1222"
+	},
+	{
+		"id":22,
+		"subId":321,
+		"className":"DataNode2",
+		"someStr":"122"
+	},
+	{
+		"id":222,
+        "subId":31,
+        "className":"DataNode1",
+		"data1":122
+	},
+	{
+		"id":222,
+		"className":"DataNode1",
+		"data1":122
+	}
+]

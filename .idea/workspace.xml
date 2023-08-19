@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f9a40cc-cfae-4591-ab5b-47122cf28c3c" name="Changes" comment="" />
+    <list default="true" id="1f9a40cc-cfae-4591-ab5b-47122cf28c3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Jackson/AlgDeserialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/json_data_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Deserializer/CustomOneElemDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jackson/CustomOneElemDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/json_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/json_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,9 +41,128 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "D:/git repos/binaryTree/src/main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git repos\binaryTree\src\main" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git repos\binaryTree\src\main" />
+      <recent name="D:\git repos\binaryTree" />
+      <recent name="D:\git repos\binaryTree\src" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Entity" />
+      <recent name="Nodes" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BinaryTreeTest.addFromFile1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binaryTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="addFromFile1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTest.addFromFile2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binaryTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="addFromFile2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTest.delete3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binaryTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="delete3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTest.delete4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binaryTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="delete4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTest.deleteExc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binaryTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="deleteExc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BinaryTreeTest.addFromFile1" />
+        <item itemvalue="JUnit.BinaryTreeTest.addFromFile2" />
+        <item itemvalue="JUnit.BinaryTreeTest.deleteExc" />
+        <item itemvalue="JUnit.BinaryTreeTest.delete4" />
+        <item itemvalue="JUnit.BinaryTreeTest.delete3" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -35,8 +171,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692038789836</updated>
-      <workItem from="1692038791988" duration="6000" />
+      <workItem from="1692038791988" duration="2682000" />
+      <workItem from="1692046123269" duration="29000" />
+      <workItem from="1692091669501" duration="7044000" />
+      <workItem from="1692128474413" duration="168000" />
+      <workItem from="1692168878554" duration="17151000" />
+      <workItem from="1692260108574" duration="17406000" />
+      <workItem from="1692380419599" duration="2814000" />
+      <workItem from="1692432342310" duration="7537000" />
+      <workItem from="1692472873889" duration="5700000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java</url>
+          <line>189</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Jackson/AlgDeserialization.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
