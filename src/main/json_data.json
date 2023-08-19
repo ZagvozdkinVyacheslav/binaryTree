@@ -2,25 +2,24 @@
 	{
 		"id":2,
 		"subId":31,
-		"className":"DataNode1",
+		"className":"DatNode1",
 		"data1":12
 	},
 	{
 		"id":22,
 		"subId":321,
-		"className":"DataNode1",
-		"data1":122
-	},
-	{
-		"id":5,
-        "subId":7,
-        "className":"Tree",
-		"data1":122
+		"className":"DataNode2",
+		"someStr":"122"
 	},
 	{
 		"id":222,
         "subId":31,
         "className":"DataNode1",
+		"data1":122
+	},
+	{
+		"id":222,
+		"className":"DataNode1",
 		"data1":122
 	}
 ]

@@ -14,6 +14,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.rmi.NoSuchObjectException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,10 +33,11 @@ public class BinaryTree<T extends TreeNode> {
     public void add(TreeNode value){
         try {
             switch(value.getClassName()){
-                case "TreeNode":
                 case "DataNode1":
+                case "DataNode2":
                     root = addRecursive(root, value);
                     break;
+
                 default:
                     throw new IllegalArgumentException();
             }
@@ -53,14 +55,19 @@ public class BinaryTree<T extends TreeNode> {
             size++;
             return new Node(value);
         }
-        if(value.compareTo(current.getValue()) < 0){
-            current.setLeftChild(addRecursive(current.getLeftChild(), value));
-        }
-        else if(value.compareTo(current.getValue()) > 0){
-            current.setRightChild(addRecursive(current.getRightChild(), value));
-        }
-        else {
-            return current;
+        try{
+            if(value.compareTo(current.getValue()) < 0){
+                current.setLeftChild(addRecursive(current.getLeftChild(), value));
+            }
+            else if(value.compareTo(current.getValue()) > 0){
+                current.setRightChild(addRecursive(current.getRightChild(), value));
+            }
+            else {
+                return current;
+            }
+
+        }catch (NullPointerException e){
+            log.error("Wrong data");
         }
         return current;
 
@@ -200,7 +207,7 @@ public class BinaryTree<T extends TreeNode> {
         return Arrays.asList(objects);
     }*/
 
-    private List<TreeNode> fileToListOfPojos(String path) throws IOException {
+    /*private List<TreeNode> fileToListOfPojos(String path) throws IOException {
 
 
         final ObjectMapper mapper = new ObjectMapper();
@@ -213,10 +220,8 @@ public class BinaryTree<T extends TreeNode> {
         //List<TreeNode>  typeList = Arrays.asList(mapper.readValue(file, TreeNode.class)); //new TypeReference<>(){}
 
         return new ArrayList<>();
-    }
+    }*/
     private List<TreeNode> listJsonToListOfPojos(String path) throws IOException {//One Elem Deserialize
-
-
         final ObjectMapper mapper = new ObjectMapper();
         final SimpleModule module = new SimpleModule();
         module.addDeserializer(TreeNode.class, new CustomOneElemDeserializer());
@@ -224,17 +229,17 @@ public class BinaryTree<T extends TreeNode> {
         List<String> listJson = jsonToListOfPojos(path);
         List<TreeNode>  typeList = new ArrayList<>();
         for (int i = 0; i < listJson.size(); i++) {
-            typeList.add(mapper.readValue(listJson.get(i), TreeNode.class));
+            try {
+                typeList.add(mapper.readValue(listJson.get(i), TreeNode.class));
+            }catch (IllegalArgumentException e){
+                log.error(e.getMessage());
+            }
         }
-        //List<TreeNode>  typeList = Arrays.asList(mapper.readValue(file, TreeNode.class)); //new TypeReference<>(){}
-
         return typeList;
     }
     private List<String> jsonToListOfPojos(String path) throws IOException {
         File file = new File(path);
         StringBuilder jsonSb = new StringBuilder(FileUtils.readFileToString(file, StandardCharsets.UTF_8));
-        jsonSb.deleteCharAt(0);
-        jsonSb.deleteCharAt(0);
         jsonSb.deleteCharAt(0);
         List<String> listStrJson = new ArrayList<>();
         for (int i = 0; i < jsonSb.length(); i++) {

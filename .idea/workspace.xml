@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f9a40cc-cfae-4591-ab5b-47122cf28c3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Deserializer/CustomOneElemDeserializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Deserializer/CustomOneElemDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Deserializer/CustomOneElemDeserializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass/mainFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass/mainFunc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Nodes/DataNode1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inheritance/DataNode1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Nodes/DataNode2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inheritance/DataNode2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Nodes/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Nodes/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Nodes/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Abstract/TreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/json_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/json_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Nodes/TreeNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Nodes/TreeNodeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,21 +67,8 @@
       <recent name="Nodes" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BinaryTreeTest.addFromFile">
-    <configuration name="mainFunc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainClass.mainFunc" />
-      <module name="binaryTree" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MainClass.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinaryTreeTest.addFromFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="BinaryTreeTest.delete1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
@@ -98,54 +78,71 @@
       </extension>
       <option name="PACKAGE_NAME" value="Entity" />
       <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="addFromFile" />
+      <option name="METHOD_NAME" value="delete1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeNodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryTreeTest.delete2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Abstract.*" />
+          <option name="PATTERN" value="Entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Nodes" />
-      <option name="MAIN_CLASS_NAME" value="Nodes.TreeNodeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TreeNodeTest.compareTo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="binaryTree" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Abstract.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Nodes" />
-      <option name="MAIN_CLASS_NAME" value="Nodes.TreeNodeTest" />
-      <option name="METHOD_NAME" value="compareTo3" />
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="delete2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeNodeTest.compareTo4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryTreeTest.delete3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Abstract.*" />
+          <option name="PATTERN" value="Entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Nodes" />
-      <option name="MAIN_CLASS_NAME" value="Nodes.TreeNodeTest" />
-      <option name="METHOD_NAME" value="compareTo4" />
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="delete3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTest.delete4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binaryTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="delete4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTest.deleteExc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binaryTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entity" />
+      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="deleteExc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BinaryTreeTest.addFromFile" />
-        <item itemvalue="JUnit.TreeNodeTest" />
-        <item itemvalue="JUnit.TreeNodeTest.compareTo4" />
-        <item itemvalue="JUnit.TreeNodeTest.compareTo3" />
-        <item itemvalue="Application.mainFunc" />
+        <item itemvalue="JUnit.BinaryTreeTest.deleteExc" />
+        <item itemvalue="JUnit.BinaryTreeTest.delete4" />
+        <item itemvalue="JUnit.BinaryTreeTest.delete3" />
+        <item itemvalue="JUnit.BinaryTreeTest.delete2" />
+        <item itemvalue="JUnit.BinaryTreeTest.delete1" />
       </list>
     </recent_temporary>
   </component>
@@ -176,11 +173,22 @@
       <workItem from="1692168878554" duration="17151000" />
       <workItem from="1692260108574" duration="17406000" />
       <workItem from="1692380419599" duration="2814000" />
-      <workItem from="1692432342310" duration="2368000" />
+      <workItem from="1692432342310" duration="7225000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
