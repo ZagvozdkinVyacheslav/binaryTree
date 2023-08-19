@@ -185,12 +185,16 @@ class BinaryTreeTest {
     }
 
     @Test
-    void addFromFile() {
-        bt.addFromFile("src/main/json_data.json");
-        System.out.println(bt.size);
-
+    void addFromFile1() {//size
+        bt.addFromFile("src/main/json_data_test.json");
+        assertEquals(2, bt.size);
     }
-
+    @Test
+    void addFromFile2() {//проверка на создание из абстрактного класса
+        bt.addFromFile("src/main/json_data_test.json");
+        assertEquals("DataNode1", bt.getRoot().getValue().getClass().getSimpleName());
+    }
+//остальное падает в log
     /*@Test
     void fileToListOfPojos() {
         try {

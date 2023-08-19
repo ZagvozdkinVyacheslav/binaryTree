@@ -2,8 +2,8 @@
 	{
 		"id":2,
 		"subId":31,
-		"className":"DatNode1",
-		"data1":12
+		"className":"DatNode2",
+		"someStr":"1222"
 	},
 	{
 		"id":22,

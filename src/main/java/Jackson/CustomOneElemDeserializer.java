@@ -1,4 +1,4 @@
-package Deserializer;
+package Jackson;
 
 import Abstract.TreeNode;
 import Inheritance.DataNode1;
@@ -23,19 +23,25 @@ public class CustomOneElemDeserializer extends StdDeserializer<TreeNode> {
         super(vc);
     }
     @Override
-    public TreeNode deserialize(final JsonParser parser, final DeserializationContext context) throws IOException, JacksonException,NoSuchObjectException {
+    public TreeNode deserialize(final JsonParser parser, final DeserializationContext context) throws IOException, JacksonException,NoSuchObjectException,NullPointerException {
         final JsonNode node = parser.getCodec().readTree(parser);
         final ObjectMapper mapper = (ObjectMapper)parser.getCodec();
 
         String temp = node.get("className").toString();
 
-            switch(temp){
-                case "\"DataNode1\"":
+        switch(temp){
+            case "\"DataNode1\"":
+                if(node.has("id")&&node.has("subId")&&node.has("data1"))
                     return mapper.treeToValue(node, DataNode1.class);
-                case "\"DataNode2\"":
+                else throw new IllegalArgumentException("Wrong data fields");
+            case "\"DataNode2\"":
+                if(node.has("id")&&node.has("subId")&&node.has("someStr"))
                     return mapper.treeToValue(node, DataNode2.class);
-                default:
-                    throw new IllegalArgumentException("The creation of such an object is prohibited");
-            }
+                else throw new IllegalArgumentException("Wrong data fields");
+
+            default:
+                throw new IllegalArgumentException("The creation of such an object is prohibited");
+        }
+
     }
 }

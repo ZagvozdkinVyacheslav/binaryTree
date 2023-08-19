@@ -1,6 +1,7 @@
 package Entity;
 
-import Deserializer.CustomOneElemDeserializer;
+import Jackson.AlgDeserialization;
+import Jackson.CustomOneElemDeserializer;
 import Inheritance.DataNode1;
 import Nodes.Node;
 import Abstract.TreeNode;
@@ -14,9 +15,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.rmi.NoSuchObjectException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 @Getter
@@ -45,30 +44,30 @@ public class BinaryTree<T extends TreeNode> {
         catch (IllegalArgumentException e){
             log.error("Invalid class name \"" + value.getClassName() + "\"");
         }
+        catch (NullPointerException e){
+            log.error("Invalid data in class");
+        }
 
 
 
     }
-    private Node addRecursive(Node current, TreeNode value){
+    private Node addRecursive(Node current, TreeNode value) throws NullPointerException{
 
         if(current == null){
             size++;
             return new Node(value);
         }
-        try{
-            if(value.compareTo(current.getValue()) < 0){
-                current.setLeftChild(addRecursive(current.getLeftChild(), value));
-            }
-            else if(value.compareTo(current.getValue()) > 0){
-                current.setRightChild(addRecursive(current.getRightChild(), value));
-            }
-            else {
-                return current;
-            }
-
-        }catch (NullPointerException e){
-            log.error("Wrong data");
+        if(value.compareTo(current.getValue()) < 0){
+            current.setLeftChild(addRecursive(current.getLeftChild(), value));
         }
+        else if(value.compareTo(current.getValue()) > 0){
+            current.setRightChild(addRecursive(current.getRightChild(), value));
+        }
+        else {
+            return current;
+        }
+
+
         return current;
 
     }
@@ -192,81 +191,17 @@ public class BinaryTree<T extends TreeNode> {
         clearTree(root);
         root = null;
     }
-    /*public static <T> List<T> parseJsonArray(String path,
-                                             Class<T> classOnWhichArrayIsDefined)
-            throws IOException, ClassNotFoundException {
-        ObjectMapper mapper = new ObjectMapper();
-        File file = new File(path);
-        Class<T[]> arrayClass = null;
-        try {
-            arrayClass = (Class<T[]>) Class.forName(String.valueOf(classOnWhichArrayIsDefined.getDeclaredField("className")));
-        } catch (NoSuchFieldException e) {
-            log.error("Invalid json data");
-        }
-        T[] objects = mapper.readValue(file, arrayClass);
-        return Arrays.asList(objects);
-    }*/
-
-    /*private List<TreeNode> fileToListOfPojos(String path) throws IOException {
-
-
-        final ObjectMapper mapper = new ObjectMapper();
-        final SimpleModule module = new SimpleModule();
-        module.addDeserializer(TreeNode.class, new CustomOneElemDeserializer());
-        mapper.registerModule(module);
-        jsonToListOfPojos(path);
-
-
-        //List<TreeNode>  typeList = Arrays.asList(mapper.readValue(file, TreeNode.class)); //new TypeReference<>(){}
-
-        return new ArrayList<>();
-    }*/
-    private List<TreeNode> listJsonToListOfPojos(String path) throws IOException {//One Elem Deserialize
-        final ObjectMapper mapper = new ObjectMapper();
-        final SimpleModule module = new SimpleModule();
-        module.addDeserializer(TreeNode.class, new CustomOneElemDeserializer());
-        mapper.registerModule(module);
-        List<String> listJson = jsonToListOfPojos(path);
-        List<TreeNode>  typeList = new ArrayList<>();
-        for (int i = 0; i < listJson.size(); i++) {
-            try {
-                typeList.add(mapper.readValue(listJson.get(i), TreeNode.class));
-            }catch (IllegalArgumentException e){
-                log.error(e.getMessage());
-            }
-        }
-        return typeList;
-    }
-    private List<String> jsonToListOfPojos(String path) throws IOException {
-        File file = new File(path);
-        StringBuilder jsonSb = new StringBuilder(FileUtils.readFileToString(file, StandardCharsets.UTF_8));
-        jsonSb.deleteCharAt(0);
-        List<String> listStrJson = new ArrayList<>();
-        for (int i = 0; i < jsonSb.length(); i++) {
-            StringBuilder temp = new StringBuilder();
-            while(jsonSb.charAt(0) != '}'){
-                temp.append(jsonSb.charAt(0));
-                jsonSb.deleteCharAt(0);
-            }
-            temp.append(jsonSb.charAt(0));
-            jsonSb.deleteCharAt(0);
-            jsonSb.deleteCharAt(0);
-            listStrJson.add(temp.toString());
-        }
-
-        return listStrJson;
-    }
-
     public void addFromFile(String path){
         try {
-            var list = listJsonToListOfPojos(path);
+            AlgDeserialization alg = new AlgDeserialization();
+            var list = alg.listStringJsonToListOfPojos(path);
             for (var elem:list
             ) {
                 this.add(elem);
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            log.error("Wrong data");
         }
-
     }
+
 }
