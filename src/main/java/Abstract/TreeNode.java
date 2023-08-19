@@ -1,17 +1,19 @@
-package Nodes;
+package Abstract;
 
+import Inheritance.DataNode1;
+import Inheritance.DataNode2;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.lang.reflect.Field;
-import java.util.Comparator;
-
 @Getter
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
+
 public abstract class TreeNode implements Comparable<TreeNode>{
     private Long id;
     private Long subId;

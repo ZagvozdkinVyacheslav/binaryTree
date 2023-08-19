@@ -1,5 +1,6 @@
 package Nodes;
 
+import Abstract.TreeNode;
 import lombok.Getter;
 import lombok.Setter;
 

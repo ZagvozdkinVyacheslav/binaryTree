@@ -14,11 +14,13 @@
 	{
 		"id":5,
         "subId":7,
-        "className":"Tree"
+        "className":"Tree",
+		"data1":122
 	},
 	{
 		"id":222,
         "subId":31,
-        "className":"DataNode1"
+        "className":"DataNode1",
+		"data1":122
 	}
 ]

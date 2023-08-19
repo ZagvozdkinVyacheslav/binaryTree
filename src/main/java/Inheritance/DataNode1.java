@@ -1,5 +1,6 @@
-package Nodes;
+package Inheritance;
 
+import Abstract.TreeNode;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
-public class DataNode1 extends TreeNode{
+public class DataNode1 extends TreeNode {
     private Double data1;
 
     public DataNode1(Long id, Long subId, String className, Double data1) {

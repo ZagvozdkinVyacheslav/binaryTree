@@ -1,18 +1,19 @@
 package Entity;
 
-import Nodes.DataNode1;
+import Deserializer.CustomOneElemDeserializer;
+import Inheritance.DataNode1;
 import Nodes.Node;
-import Nodes.TreeNode;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
+import Abstract.TreeNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.source.tree.Tree;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +29,7 @@ public class BinaryTree<T extends TreeNode> {
         size = 0;
         out = new StringBuilder();
     }
-    public void add(T value){
+    public void add(TreeNode value){
         try {
             switch(value.getClassName()){
                 case "TreeNode":
@@ -46,7 +47,7 @@ public class BinaryTree<T extends TreeNode> {
 
 
     }
-    private Node addRecursive(Node current, T value){
+    private Node addRecursive(Node current, TreeNode value){
 
         if(current == null){
             size++;
@@ -199,17 +200,61 @@ public class BinaryTree<T extends TreeNode> {
         return Arrays.asList(objects);
     }*/
 
-    private List<T> fileToListOfPojos(String path) throws IOException {//дописать на несколько типов
-        ObjectMapper objectMapper = new ObjectMapper();
-        File file = new File(path);
-        JavaType type = objectMapper.getTypeFactory().
-                constructCollectionType(List.class, DataNode1.class);
-        List<T> typeList = objectMapper.readValue(file, type);//new TypeReference<>(){}
+    private List<TreeNode> fileToListOfPojos(String path) throws IOException {
+
+
+        final ObjectMapper mapper = new ObjectMapper();
+        final SimpleModule module = new SimpleModule();
+        module.addDeserializer(TreeNode.class, new CustomOneElemDeserializer());
+        mapper.registerModule(module);
+        jsonToListOfPojos(path);
+
+
+        //List<TreeNode>  typeList = Arrays.asList(mapper.readValue(file, TreeNode.class)); //new TypeReference<>(){}
+
+        return new ArrayList<>();
+    }
+    private List<TreeNode> listJsonToListOfPojos(String path) throws IOException {//One Elem Deserialize
+
+
+        final ObjectMapper mapper = new ObjectMapper();
+        final SimpleModule module = new SimpleModule();
+        module.addDeserializer(TreeNode.class, new CustomOneElemDeserializer());
+        mapper.registerModule(module);
+        List<String> listJson = jsonToListOfPojos(path);
+        List<TreeNode>  typeList = new ArrayList<>();
+        for (int i = 0; i < listJson.size(); i++) {
+            typeList.add(mapper.readValue(listJson.get(i), TreeNode.class));
+        }
+        //List<TreeNode>  typeList = Arrays.asList(mapper.readValue(file, TreeNode.class)); //new TypeReference<>(){}
+
         return typeList;
     }
+    private List<String> jsonToListOfPojos(String path) throws IOException {
+        File file = new File(path);
+        StringBuilder jsonSb = new StringBuilder(FileUtils.readFileToString(file, StandardCharsets.UTF_8));
+        jsonSb.deleteCharAt(0);
+        jsonSb.deleteCharAt(0);
+        jsonSb.deleteCharAt(0);
+        List<String> listStrJson = new ArrayList<>();
+        for (int i = 0; i < jsonSb.length(); i++) {
+            StringBuilder temp = new StringBuilder();
+            while(jsonSb.charAt(0) != '}'){
+                temp.append(jsonSb.charAt(0));
+                jsonSb.deleteCharAt(0);
+            }
+            temp.append(jsonSb.charAt(0));
+            jsonSb.deleteCharAt(0);
+            jsonSb.deleteCharAt(0);
+            listStrJson.add(temp.toString());
+        }
+
+        return listStrJson;
+    }
+
     public void addFromFile(String path){
         try {
-            var list = fileToListOfPojos(path);
+            var list = listJsonToListOfPojos(path);
             for (var elem:list
             ) {
                 this.add(elem);

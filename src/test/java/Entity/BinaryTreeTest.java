@@ -1,12 +1,7 @@
 package Entity;
 
-import Nodes.TreeNode;
+import Abstract.TreeNode;
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
-import java.util.NoSuchElementException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BinaryTreeTest {
     BinaryTree<TreeNode> bt = new BinaryTree<>();

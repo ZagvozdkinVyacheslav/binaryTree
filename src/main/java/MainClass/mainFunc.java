@@ -1,8 +1,8 @@
 package MainClass;
 
 import Entity.BinaryTree;
-import Nodes.DataNode1;
-import Nodes.TreeNode;
+import Inheritance.DataNode1;
+import Abstract.TreeNode;
 
 public class mainFunc {
     public static void main(String[] args) {
