@@ -1,22 +1,13 @@
 package Entity;
 
 import Jackson.AlgDeserialization;
-import Jackson.CustomOneElemDeserializer;
 import Inheritance.DataNode1;
 import Nodes.Node;
 import Abstract.TreeNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.NoSuchElementException;
 @Getter
 @Setter
