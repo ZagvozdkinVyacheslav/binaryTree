@@ -1,22 +1,13 @@
 package Entity;
 
 import Jackson.AlgDeserialization;
-import Jackson.CustomOneElemDeserializer;
 import Inheritance.DataNode1;
 import Nodes.Node;
 import Abstract.TreeNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.NoSuchElementException;
 @Getter
 @Setter
@@ -47,12 +38,8 @@ public class BinaryTree<T extends TreeNode> {
         catch (NullPointerException e){
             log.error("Invalid data in class");
         }
-
-
-
     }
     private Node addRecursive(Node current, TreeNode value) throws NullPointerException{
-
         if(current == null){
             size++;
             return new Node(value);
@@ -66,10 +53,7 @@ public class BinaryTree<T extends TreeNode> {
         else {
             return current;
         }
-
-
         return current;
-
     }
     public TreeNode find(Long id, Long subId){
         var temp = new DataNode1(id,subId);
@@ -150,7 +134,6 @@ public class BinaryTree<T extends TreeNode> {
             heir = current;
             current = current.getLeftChild();
         }
-
         if (heir != node.getRightChild()) //Если преемник не является правым потомком,
         {
             parent.setLeftChild(heir.getRightChild());
@@ -172,20 +155,17 @@ public class BinaryTree<T extends TreeNode> {
         if(out.length() >= 2){
             setOut(out.delete(out.length() - 2, out.length()));
         }
-
         String str = out.toString();
         setOut(new StringBuilder());
         return str;
     }
     private void clearTree(Node node) {
-
         if (node != null) {
             clearTree(node.getLeftChild());
             clearTree(node.getRightChild());
             node.setValue(null);
             size--;
         }
-
     }
     public void clear(){
         clearTree(root);

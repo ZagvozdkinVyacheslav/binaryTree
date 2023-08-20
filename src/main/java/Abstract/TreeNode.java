@@ -1,9 +1,4 @@
 package Abstract;
-
-import Inheritance.DataNode1;
-import Inheritance.DataNode2;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,7 +23,6 @@ public abstract class TreeNode implements Comparable<TreeNode>{
     public TreeNode(Long id, Long subId) {
         this.id = id;
         this.subId = subId;
-
     }
     @Override
     public int compareTo(TreeNode o) {

@@ -195,12 +195,5 @@ class BinaryTreeTest {
         assertEquals("DataNode1", bt.getRoot().getValue().getClass().getSimpleName());
     }
 //остальное падает в log
-    /*@Test
-    void fileToListOfPojos() {
-        try {
-            bt.fileToListOfPojos("src/main/json_data.json");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
+
 }
