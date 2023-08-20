@@ -47,12 +47,8 @@ public class BinaryTree<T extends TreeNode> {
         catch (NullPointerException e){
             log.error("Invalid data in class");
         }
-
-
-
     }
     private Node addRecursive(Node current, TreeNode value) throws NullPointerException{
-
         if(current == null){
             size++;
             return new Node(value);
@@ -66,10 +62,7 @@ public class BinaryTree<T extends TreeNode> {
         else {
             return current;
         }
-
-
         return current;
-
     }
     public TreeNode find(Long id, Long subId){
         var temp = new DataNode1(id,subId);
@@ -150,7 +143,6 @@ public class BinaryTree<T extends TreeNode> {
             heir = current;
             current = current.getLeftChild();
         }
-
         if (heir != node.getRightChild()) //Если преемник не является правым потомком,
         {
             parent.setLeftChild(heir.getRightChild());
@@ -172,20 +164,17 @@ public class BinaryTree<T extends TreeNode> {
         if(out.length() >= 2){
             setOut(out.delete(out.length() - 2, out.length()));
         }
-
         String str = out.toString();
         setOut(new StringBuilder());
         return str;
     }
     private void clearTree(Node node) {
-
         if (node != null) {
             clearTree(node.getLeftChild());
             clearTree(node.getRightChild());
             node.setValue(null);
             size--;
         }
-
     }
     public void clear(){
         clearTree(root);

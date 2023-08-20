@@ -23,12 +23,11 @@ public class CustomOneElemDeserializer extends StdDeserializer<TreeNode> {
         super(vc);
     }
     @Override
-    public TreeNode deserialize(final JsonParser parser, final DeserializationContext context) throws IOException, JacksonException,NoSuchObjectException,NullPointerException {
+    public TreeNode deserialize(final JsonParser parser, final DeserializationContext context) throws IOException,
+            JacksonException,NoSuchObjectException,NullPointerException {
         final JsonNode node = parser.getCodec().readTree(parser);
         final ObjectMapper mapper = (ObjectMapper)parser.getCodec();
-
         String temp = node.get("className").toString();
-
         switch(temp){
             case "\"DataNode1\"":
                 if(node.has("id")&&node.has("subId")&&node.has("data1"))
@@ -42,6 +41,5 @@ public class CustomOneElemDeserializer extends StdDeserializer<TreeNode> {
             default:
                 throw new IllegalArgumentException("The creation of such an object is prohibited");
         }
-
     }
 }

@@ -28,7 +28,6 @@ public abstract class TreeNode implements Comparable<TreeNode>{
     public TreeNode(Long id, Long subId) {
         this.id = id;
         this.subId = subId;
-
     }
     @Override
     public int compareTo(TreeNode o) {
