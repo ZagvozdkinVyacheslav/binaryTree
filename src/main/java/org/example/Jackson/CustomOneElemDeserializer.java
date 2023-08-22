@@ -1,8 +1,8 @@
-package Jackson;
+package org.example.Jackson;
 
-import Abstract.TreeNode;
-import Inheritance.DataNode1;
-import Inheritance.DataNode2;
+import org.example.Abstract.TreeNode;
+import org.example.Inheritance.DataNode1;
+import org.example.Inheritance.DataNode2;
 import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;

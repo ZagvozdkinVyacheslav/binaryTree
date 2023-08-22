@@ -1,7 +1,8 @@
 package Entity;
 
-import Abstract.TreeNode;
-import Inheritance.DataNode1;
+import org.example.Abstract.TreeNode;
+import org.example.Entity.BinaryTree;
+import org.example.Inheritance.DataNode1;
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
@@ -187,7 +188,7 @@ class BinaryTreeTest {
     @Test
     void addFromFile1() {//size
         bt.addFromFile("src/main/json_data_test.json");
-        assertEquals(2, bt.size);
+        assertEquals(2, bt.getSize());
     }
     @Test
     void addFromFile2() {//проверка на создание из абстрактного класса

@@ -1,6 +1,6 @@
-package Inheritance;
+package org.example.Inheritance;
 
-import Abstract.TreeNode;
+import org.example.Abstract.TreeNode;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
