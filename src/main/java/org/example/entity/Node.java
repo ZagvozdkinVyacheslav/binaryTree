@@ -1,6 +1,6 @@
-package org.example.Entity;
+package org.example.entity;
 
-import org.example.Abstract.TreeNode;
+import org.example.abstractClasses.TreeNode;
 import lombok.Getter;
 import lombok.Setter;
 
