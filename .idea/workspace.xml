@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f9a40cc-cfae-4591-ab5b-47122cf28c3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Abstract/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Abstract/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entity/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Inheritance/DataNode1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Inheritance/DataNode1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Inheritance/DataNode2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Inheritance/DataNode2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Jackson/AlgDeserialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Jackson/AlgDeserialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Jackson/CustomOneElemDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Jackson/CustomOneElemDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass/mainFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Nodes/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Nodes/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Entity/BinaryTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Nodes/TreeNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Nodes/TreeNodeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,12 +71,12 @@
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Entity.*" />
+          <option name="PATTERN" value="entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Entity" />
-      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="MAIN_CLASS_NAME" value="entity.BinaryTreeTest" />
       <option name="METHOD_NAME" value="addFromFile1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -98,12 +87,12 @@
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Entity.*" />
+          <option name="PATTERN" value="entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Entity" />
-      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="MAIN_CLASS_NAME" value="entity.BinaryTreeTest" />
       <option name="METHOD_NAME" value="addFromFile2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -114,12 +103,12 @@
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Entity.*" />
+          <option name="PATTERN" value="entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Entity" />
-      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="MAIN_CLASS_NAME" value="entity.BinaryTreeTest" />
       <option name="METHOD_NAME" value="delete3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -130,12 +119,12 @@
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Entity.*" />
+          <option name="PATTERN" value="entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Entity" />
-      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="MAIN_CLASS_NAME" value="entity.BinaryTreeTest" />
       <option name="METHOD_NAME" value="delete4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -146,12 +135,12 @@
       <module name="binaryTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Entity.*" />
+          <option name="PATTERN" value="entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Entity" />
-      <option name="MAIN_CLASS_NAME" value="Entity.BinaryTreeTest" />
+      <option name="MAIN_CLASS_NAME" value="entity.BinaryTreeTest" />
       <option name="METHOD_NAME" value="deleteExc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -186,7 +175,7 @@
       <workItem from="1692432342310" duration="7537000" />
       <workItem from="1692472873889" duration="6474000" />
       <workItem from="1692515574961" duration="1588000" />
-      <workItem from="1692708650260" duration="307000" />
+      <workItem from="1692708650260" duration="616000" />
     </task>
     <servers />
   </component>
