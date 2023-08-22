@@ -1,4 +1,4 @@
-package org.example.Abstract;
+package org.example.abstractClasses;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,8 @@
-package Entity;
+package entity;
 
-import org.example.Abstract.TreeNode;
-import org.example.Entity.BinaryTree;
-import org.example.Inheritance.DataNode1;
+import org.example.abstractClasses.TreeNode;
+import org.example.entity.BinaryTree;
+import org.example.inheritance.DataNode1;
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;

@@ -1,8 +1,8 @@
-package org.example.Entity;
+package org.example.entity;
 
-import org.example.Jackson.AlgDeserialization;
-import org.example.Inheritance.DataNode1;
-import org.example.Abstract.TreeNode;
+import org.example.jackson.AlgDeserialization;
+import org.example.inheritance.DataNode1;
+import org.example.abstractClasses.TreeNode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;

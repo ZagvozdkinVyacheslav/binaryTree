@@ -1,6 +1,6 @@
-package org.example.Jackson;
+package org.example.jackson;
 
-import org.example.Abstract.TreeNode;
+import org.example.abstractClasses.TreeNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import lombok.extern.slf4j.Slf4j;

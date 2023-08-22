@@ -1,11 +1,11 @@
-package Nodes;
+package entity;
 
-import org.example.Inheritance.DataNode1;
+import org.example.inheritance.DataNode1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TreeNodeTest {
+class NodesTest {
 
     @Test
     void compareTo1() {
