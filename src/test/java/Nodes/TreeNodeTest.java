@@ -1,6 +1,6 @@
 package Nodes;
 
-import Inheritance.DataNode1;
+import org.example.Inheritance.DataNode1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

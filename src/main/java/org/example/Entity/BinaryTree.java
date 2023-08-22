@@ -1,12 +1,12 @@
-package Entity;
+package org.example.Entity;
 
-import Jackson.AlgDeserialization;
-import Inheritance.DataNode1;
-import Nodes.Node;
-import Abstract.TreeNode;
+import org.example.Jackson.AlgDeserialization;
+import org.example.Inheritance.DataNode1;
+import org.example.Abstract.TreeNode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+
 import java.io.IOException;
 import java.util.NoSuchElementException;
 @Getter

@@ -1,6 +1,6 @@
-package MainClass;
+package org.example;
 
-public class mainFunc {
+public class MainClass {
     public static void main(String[] args) {
     }
 }
